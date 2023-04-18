@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS sensors (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    sensor_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     latitude FLOAT NOT NULL,
     longitude FLOAT NOT NULL,
-    radius FLOAT NOT NULL
+    radius_meters FLOAT NOT NULL
 );
