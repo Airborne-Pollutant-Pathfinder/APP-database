@@ -1,0 +1,1 @@
+INSERT INTO sensors (location, radius_meters) VALUES (ST_GeomFromText("POINT(33.133839 -96.768111)", 4326), 100);
