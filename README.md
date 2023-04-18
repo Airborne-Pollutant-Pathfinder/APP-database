@@ -3,6 +3,8 @@
 This database is responsible for providing a datastore to store sensors, pollutants, and captured pollutants. It uses
 MySQL as the database engine, Docker for containerization, and Flyway for database migrations.
 
+![image](https://user-images.githubusercontent.com/2886217/232638486-52332bc6-0b4c-4794-8911-469e3407e44f.png)
+
 ## Setup
 
 The easiest way to get a database up-and running with all the migrations applied is by using Docker-Compose:
