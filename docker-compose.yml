@@ -1,0 +1,42 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    command:
+      --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: AirbornePollutantPathfinder
+    networks:
+      - default
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -ppassword"]
+      interval: 5s
+      retries: 10
+  flyway:
+    image: boxfuse/flyway:latest-alpine
+    command:
+      -url=jdbc:mysql://db:3306/AirbornePollutantPathfinder
+      -user=root
+      -password=password
+      migrate
+    volumes:
+      - ./migrations:/flyway/sql
+      - ./config:/flyway/conf
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - default
+
+volumes:
+  db_data:
+
+networks:
+  default:
+    driver: bridge
