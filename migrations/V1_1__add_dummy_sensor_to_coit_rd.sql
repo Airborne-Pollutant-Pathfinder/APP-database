@@ -1,0 +1,1 @@
+INSERT INTO sensors (latitude, longitude, radius_meters) VALUES (33.133839, -96.768111, 100);
