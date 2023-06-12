@@ -5,6 +5,12 @@ MySQL as the database engine, Docker for containerization, and Flyway for databa
 
 ![image](https://user-images.githubusercontent.com/2886217/232968157-9b0136d4-339b-42c1-aad7-4d7775fad6c0.png)
 
+## Video
+
+Click below to see our video for the app.
+
+[![Watch the video](https://i.imgur.com/OBm9FRB.png)](https://youtu.be/z_J9tR2n-vY)
+
 ## Setup
 
 The easiest way to get a database up-and running with all the migrations applied is by using Docker-Compose:
